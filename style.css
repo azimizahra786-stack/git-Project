@@ -1,0 +1,318 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing:
+    border-box font-family,
+    "Poppins",
+    sons-serif;
+}
+
+.container12 {
+  padding-bottom: 100px;
+}
+body {
+  margin: auto;
+  background-color: #fff;
+  text-align: center;
+  position: relative right;
+  background-color: black;
+}
+header {
+  display: flex;
+  background-color: lightsteelblue;
+  box-shadow: 0 0 10px lightgray;
+  height: 100px;
+  width: 600px;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 610px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.c {
+  padding: 30px 1px;
+}
+.btn {
+  width: 50px;
+  height: 40px;
+  background-color: cornflowerblue;
+  border: none;
+  color: #fff;
+  border-radius: 20%;
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  left: 480px;
+}
+header .btn:hover {
+  background: black;
+  color: yellow;
+}
+.kabul {
+  font-size: 28px;
+  padding: 40px;
+  margin-left: 30px;
+}
+
+.daily {
+  color: yellow;
+  padding-left: 8px;
+  padding-top: 20px;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+hr {
+  color: lightblue;
+}
+.title {
+  color: white;
+  padding-left: 100px;
+  padding-top: 1px;
+}
+
+.week {
+  color: white;
+  word-spacing: 60px;
+  padding-top: 30px;
+  font-size: 18px;
+  text-shadow: 1px 0 lightgray;
+}
+.num {
+  color: white;
+  word-spacing: 66px;
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 5px;
+}
+.container {
+  display: flex;
+}
+.card {
+  margin-left: 610px;
+  display: inline-block;
+  background-color: black;
+  width: 600px;
+  height: 700px;
+  box-shadow: 0 0 12px gray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+span {
+  color: white;
+  padding-left: 35px;
+  padding-top: 2px;
+  margin: 1px;
+}
+.span {
+  position: absolute;
+  margin: 20px;
+  letter-spacing: 13px;
+}
+
+#blue {
+  color: dodgerblue;
+}
+#yellow {
+  color: yellow;
+}
+
+#yellow1 {
+  color: yellow;
+}
+
+#black {
+  color: gray;
+}
+
+img {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: absolute;
+  margin: 20px;
+  margin-top: 20px;
+}
+div .img1 {
+  height: 230px;
+  width: 540px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  right: 640px;
+  top: 390px;
+  left: 621px;
+}
+.wth {
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  margin-left: 85px;
+}
+.container1 {
+  display: flex;
+  padding-top: 60px;
+  padding-left: 50px;
+}
+.grade1 {
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+#drop2 {
+  color: cadetblue;
+  font-size: 20px;
+  position: relative;
+  right: 95px;
+  top: 25px;
+}
+
+.grade2 {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  top: 26px;
+  right: 130px;
+}
+#drop3 {
+  color: cadetblue;
+  font-size: 20px;
+  position: relative;
+  right: 97px;
+  top: 26px;
+}
+.sum {
+  color: white;
+  background: #1e1e1e;
+  height: 140px;
+  width: 550px;
+  margin-top: 295px;
+  margin-left: 25px;
+  font-size: 20px;
+  border-radius: 8px;
+  text-align: justify;
+  text-indent: 19px;
+}
+.daysum {
+  padding-top: 12px;
+}
+#cloud {
+  position: relative;
+  bottom: 100px;
+  right: 52px;
+  top: 9px;
+}
+#icon12 {
+  color: dodgerblue;
+}
+.num1 {
+  position: absolute;
+  top: 710px;
+  left: 670px;
+  color: white;
+}
+.world {
+  padding-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 340px;
+    height: 650px;
+    padding-left: 20px;
+    margin-left: 12px;
+  }
+  header {
+    height: 70px;
+    width: 360px;
+    margin-left: 12px;
+  }
+  .btn {
+    width: 32px;
+    height: 30px;
+    font-size: 20px;
+    position: relative;
+    left: 280px;
+    top: -8px;
+    cursor: pointer;
+  }
+  .wth {
+    position: absolute;
+    top: 33px;
+    font-size: 24px;
+    margin-left: 70px;
+  }
+  img {
+    height: 45px;
+    width: 45px;
+    margin-top: 15px;
+  }
+  .daily {
+    padding-left: 0;
+    padding-right: 10px;
+    font-size: 12px;
+  }
+  hr {
+    margin-right: 1px;
+    margin-left: -19px;
+  }
+  .week {
+    word-spacing: 36px;
+    padding-top: 20px;
+    margin-left: -20px;
+    font-size: 13px;
+  }
+  .num {
+    word-spacing: 38px;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 5px;
+    font-size: 14px;
+    margin-left: -15px;
+  }
+  .grade1 {
+    font-size: 15px;
+  }
+  #drop2 {
+    font-size: 15px;
+    position: relative;
+    right: 95px;
+    top: 25px;
+  }
+
+  .grade2 {
+    font-size: 15px;
+    position: relative;
+    top: 26px;
+    right: 105px;
+  }
+  #drop3 {
+    font-size: 15px;
+    position: relative;
+    right: 95px;
+    top: 26px;
+  }
+  .sum {
+    height: 140px;
+    width: 330px;
+    margin-top: 295px;
+    margin-left: -4px;
+    margin-right: 50px;
+    font-size: 15px;
+    text-indent: 19px;
+  }
+  .sum hr {
+    margin-left: 1px;
+  }
+  .num1 {
+    position: absolute;
+    top: 620px;
+    left: 60px;
+    color: white;
+  }
+  .world {
+    margin-top: 12px;
+  }
+}
