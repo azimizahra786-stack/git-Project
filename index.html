@@ -1,136 +1,252 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather | Kabul</title>
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
-          rel="stylesheet">
-
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 
-<body class="min-h-screen bg-gradient-to-br from-sky-100 via-blue-50 to-indigo-200 text-slate-800">
+<body class="min-h-screen bg-black text-white font-sans flex justify-center p-3 sm:p-6">
 
-    <header class="flex items-center justify-between gap-3 bg-white/80 px-5 py-4 shadow-sm">
-        <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-blue-700">
-            <span class="material-symbols-outlined text-4xl">partly_cloudy_day</span>
-            Wth
-        </a>
+    <main class="w-full max-w-[600px]">
 
-        <div class="flex gap-2">
-            <button class="rounded-lg bg-blue-600 px-3 py-2 font-semibold text-white">°C</button>
-            <button class="rounded-lg border border-blue-200 bg-white px-3 py-2 font-semibold">°F</button>
-        </div>
-    </header>
+        <!-- Header -->
+        <header class="flex items-center h-20 sm:h-24 bg-[#b0c4de] rounded-t-xl shadow-lg px-4">
 
-    <main class="mx-auto max-w-5xl space-y-6 p-4 sm:p-8">
+            <img
+                src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=100&h=100&fit=crop"
+                alt="Weather logo"
+                class="w-12 h-12 rounded-full object-cover"
+            >
 
-        <section class="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white shadow-xl sm:p-10">
-            <p class="mb-2 text-sm text-blue-100">Weather Forecast</p>
-            <h1 class="text-3xl font-bold sm:text-4xl">4th District, Kabul Province</h1>
-            <p class="mt-3 text-blue-100">Your weekly weather overview</p>
+            <h1 class="ml-3 text-2xl sm:text-3xl font-bold text-black">
+                Weather
+            </h1>
 
-            <div class="mt-8 flex flex-wrap items-center justify-between gap-5">
-                <div>
-                    <span class="material-symbols-outlined text-7xl">cloud</span>
-                    <p class="mt-2 text-lg">Cloudy</p>
-                </div>
+            <div class="ml-auto flex gap-2">
 
-                <div class="text-right">
-                    <p class="text-6xl font-light">11°</p>
-                    <p class="mt-2 text-blue-100">Low: -5°</p>
-                </div>
+                <button id="celsiusBtn"
+                    class="bg-blue-500 hover:bg-black text-white px-3 py-2 rounded-lg transition">
+                    °C
+                </button>
+
+                <button id="fahrenheitBtn"
+                    class="bg-slate-600 hover:bg-black text-white px-3 py-2 rounded-lg transition">
+                    °F
+                </button>
+
             </div>
+
+        </header>
+
+        <!-- Main Section -->
+        <section class="bg-black border border-gray-800 shadow-xl rounded-b-xl p-4 sm:p-6">
+
+            <div class="flex flex-wrap justify-between items-center gap-2 mb-5">
+
+                <h2 class="text-yellow-300 text-lg sm:text-xl font-bold">
+                    Daily Forecast
+                </h2>
+
+                <p class="text-gray-300 text-sm">
+                    4th District, Kabul Province
+                </p>
+
+            </div>
+
+            <hr class="border-gray-700">
+
+            <!-- Weekly Forecast -->
+            <div class="grid grid-cols-7 text-center mt-6 gap-1">
+
+                <div>
+                    <p class="text-gray-300">S</p>
+                    <p class="mt-3">1</p>
+                    <a href="Sunday.html">
+                        <span class="material-symbols-outlined text-3xl mt-3">cloud</span>
+                    </a>
+                </div>
+
+                <div>
+                    <p class="text-gray-300">M</p>
+                    <p class="mt-3">2</p>
+                    <a href="Monday.html">
+                        <span class="material-symbols-outlined text-3xl mt-3 text-yellow-300">clear_day</span>
+                    </a>
+                </div>
+
+                <div>
+                    <p class="text-gray-300">T</p>
+                    <p class="mt-3">3</p>
+                    <a href="Tuesday.html">
+                        <span class="material-symbols-outlined text-3xl mt-3">cloudy_snowing</span>
+                    </a>
+                </div>
+
+                <div>
+                    <p class="text-gray-300">W</p>
+                    <p class="mt-3">4</p>
+                    <a href="Wendsday.html">
+                        <span class="material-symbols-outlined text-3xl mt-3 text-blue-400">rainy</span>
+                    </a>
+                </div>
+
+                <div>
+                    <p class="text-gray-300">T</p>
+                    <p class="mt-3">5</p>
+                    <a href="Thursday.html">
+                        <span class="material-symbols-outlined text-3xl mt-3 text-yellow-300">partly_cloudy_day</span>
+                    </a>
+                </div>
+
+                <div>
+                    <p class="text-gray-300">F</p>
+                    <p class="mt-3">6</p>
+                    <a href="Friday.html">
+                        <span class="material-symbols-outlined text-3xl mt-3 text-gray-400">thunderstorm</span>
+                    </a>
+                </div>
+
+                <div>
+                    <p class="text-gray-300">S</p>
+                    <p class="mt-3">7</p>
+                    <a href="Saturday.html">
+                        <span class="material-symbols-outlined text-3xl mt-3">air</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Weather Details -->
+            <div class="grid grid-cols-2 gap-4 mt-8">
+
+                <div class="bg-[#1e1e1e] rounded-lg p-4 flex items-center gap-3">
+
+                    <span class="material-symbols-outlined text-cyan-400 text-2xl">
+                        water_drop
+                    </span>
+
+                    <div>
+                        <p class="text-gray-400 text-sm">Humidity</p>
+                        <p class="text-lg font-semibold">22%</p>
+                    </div>
+
+                </div>
+
+                <div class="bg-[#1e1e1e] rounded-lg p-4 flex items-center gap-3">
+
+                    <span class="material-symbols-outlined text-cyan-400 text-2xl">
+                        water_drop
+                    </span>
+
+                    <div>
+                        <p class="text-gray-400 text-sm">Dew Point</p>
+                        <p class="text-lg font-semibold temperature" data-celsius="-13">
+                            -13°C
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Weather Image -->
+            <img
+                src="https://images.unsplash.com/photo-1517299321609-52687d1bc55a?w=900&auto=format&fit=crop"
+                alt="Cloudy weather"
+                class="w-full h-48 sm:h-56 object-cover rounded-lg mt-6"
+            >
+
+            <!-- Daily Summary -->
+            <div class="bg-[#1e1e1e] rounded-lg p-4 mt-6">
+
+                <h2 class="text-lg font-semibold mb-3">
+                    Daily Summary
+                </h2>
+
+                <hr class="border-gray-700">
+
+                <div class="flex items-center gap-4 mt-4">
+
+                    <span class="material-symbols-outlined text-blue-400 text-5xl">
+                        cloud
+                    </span>
+
+                    <p class="text-2xl font-bold">
+
+                        <span class="temperature" data-celsius="11">
+                            11°C
+                        </span>
+
+                        <span class="text-gray-400">|</span>
+
+                        <span class="temperature" data-celsius="-5">
+                            -5°C
+                        </span>
+
+                    </p>
+
+                </div>
+
+                <div class="mt-4 text-sm sm:text-base text-gray-300 space-y-2">
+
+                    <p>
+                        Daytime: The skies will be mostly cloudy.
+                    </p>
+
+                    <p>
+                        Nighttime: The skies will be partly cloudy.
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
-
-        <section class="rounded-3xl bg-white/90 p-5 shadow-lg sm:p-7">
-            <div class="mb-6 flex flex-wrap items-center justify-between gap-2">
-                <h2 class="text-2xl font-bold">Daily Forecast</h2>
-                <p class="text-sm text-slate-500">Kabul, Afghanistan</p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
-
-                <a href="Sunday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
-                    <p class="font-semibold">Sunday</p>
-                    <span class="material-symbols-outlined my-3 text-4xl text-blue-500">cloud</span>
-                    <p class="font-bold">11° / -5°</p>
-                </a>
-
-                <a href="Monday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
-                    <p class="font-semibold">Monday</p>
-                    <span class="material-symbols-outlined my-3 text-4xl text-amber-500">sunny</span>
-                    <p class="font-bold">13° / -3°</p>
-                </a>
-
-                <a href="Tuesday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
-                    <p class="font-semibold">Tuesday</p>
-                    <span class="material-symbols-outlined my-3 text-4xl text-blue-500">cloudy_snowing</span>
-                    <p class="font-bold">8° / -4°</p>
-                </a>
-
-                <a href="Wendsday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
-                    <p class="font-semibold">Wednesday</p>
-                    <span class="material-symbols-outlined my-3 text-4xl text-sky-500">rainy</span>
-                    <p class="font-bold">7° / -2°</p>
-                </a>
-
-                <a href="Thursday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
-                    <p class="font-semibold">Thursday</p>
-                    <span class="material-symbols-outlined my-3 text-4xl text-amber-500">partly_cloudy_day</span>
-                    <p class="font-bold">10° / -3°</p>
-                </a>
-
-                <a href="Friday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
-                    <p class="font-semibold">Friday</p>
-                    <span class="material-symbols-outlined my-3 text-4xl text-slate-600">thunderstorm</span>
-                    <p class="font-bold">9° / -2°</p>
-                </a>
-
-                <a href="Saturday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
-                    <p class="font-semibold">Saturday</p>
-                    <span class="material-symbols-outlined my-3 text-4xl text-blue-500">air</span>
-                    <p class="font-bold">10° / -4°</p>
-                </a>
-
-            </div>
-        </section>
-
-        <section class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-
-            <div class="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-md">
-                <span class="material-symbols-outlined text-4xl text-blue-500">water_drop</span>
-                <div>
-                    <p class="text-sm text-slate-500">Humidity</p>
-                    <p class="text-2xl font-bold">22%</p>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-md">
-                <span class="material-symbols-outlined text-4xl text-indigo-500">device_thermostat</span>
-                <div>
-                    <p class="text-sm text-slate-500">Dew Point</p>
-                    <p class="text-2xl font-bold">-13°</p>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-md">
-                <span class="material-symbols-outlined text-4xl text-sky-500">air</span>
-                <div>
-                    <p class="text-sm text-slate-500">Wind</p>
-                    <p class="text-2xl font-bold">12 km/h</p>
-                </div>
-            </div>
-
-        </section>
-
-        <footer class="py-4 text-center text-sm text-slate-500">
-            Weather Dashboard | Kabul, Afghanistan
-        </footer>
 
     </main>
+
+    <!-- Temperature Conversion -->
+    <script>
+
+        const celsiusBtn = document.getElementById("celsiusBtn");
+        const fahrenheitBtn = document.getElementById("fahrenheitBtn");
+
+        function changeTemperature(unit) {
+
+            document.querySelectorAll(".temperature").forEach(element => {
+
+                const celsius = Number(element.dataset.celsius);
+
+                const temperature = unit === "F"
+                    ? (celsius * 9 / 5) + 32
+                    : celsius;
+
+                element.textContent = Math.round(temperature) + "°" + unit;
+
+            });
+
+            celsiusBtn.classList.toggle("bg-blue-500", unit === "C");
+            celsiusBtn.classList.toggle("bg-slate-600", unit !== "C");
+
+            fahrenheitBtn.classList.toggle("bg-blue-500", unit === "F");
+            fahrenheitBtn.classList.toggle("bg-slate-600", unit !== "F");
+
+        }
+
+        celsiusBtn.addEventListener("click", () => changeTemperature("C"));
+
+        fahrenheitBtn.addEventListener("click", () => changeTemperature("F"));
+
+        changeTemperature("C");
+
+    </script>
 
 </body>
 </html>
