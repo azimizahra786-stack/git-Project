@@ -1,57 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-     <title>Weather</title>
-     <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather | Kabul</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <div class="container12">
-     <header>  
-          <div class="logo">
-         <img src="data:image/jpeg;base64,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" alt="this img has problem"/>
-         </div>
-         <div class="wth"><b>Wth</b></div>
-        <div class="c"><button class="btn">&#176C</button></div>
-        <div class="c"><button class="btn">&#176F</button></div>
-       </header>
-       <div class="container">
-    <div class="card">
-    <pre class="daily"><b>Daily Forecast</b>       4th District, Kabul Province</pre><hr>
-<div class="week"><b>S M T W T F S</b></div>
-<div class="num">1 2 3 4 5 6 7</div>
-<div class="span">
-<a href="Sunday.html"><span class="material-symbols-outlined">cloud</span></a>
-<a href="Monday.html"><span id="yellow" class="material-symbols-outlined">clear_day</span></a>
-<a href="Tuesday.html"><span class="material-symbols-outlined">cloudy_snowing</span></a>
-<a href="Wendsday.html"><span id="blue" class="material-symbols-outlined">rainy</span></a>
-<a href="Thursday.html"><span id="yellow1" class="material-symbols-outlined">partly_cloudy_day</span></a>
-<a href="Friday.html"><span id="black" class="material-symbols-outlined">thunderstorm</span></a>
-<a href="Saturday.html"><span class="material-symbols-outlined">air</span></a></div>
-    <div class="container1">
-   <div class="grade1">
-    <span id="drop2" class="material-symbols-outlined">water_drop</span>
-    <p>Humidity : 22 %</p></div>
-    <div class="grade2">
-    <span id="drop3" class="material-symbols-outlined">water_drop</span>
-    <p>Dew Point :-13&#176</p>
-     </div></div>
-     <div >
-     <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlHVQNNh-FtkYdvHVXVrz3EN7PCfBSCejSw&s" alt="This img has problem">
-     </div>
-     <div class="sum">
-      <div>
-     <p class="daysum">Daily Summary</p><hr>
-     </div>
-        <div id="cloud">
-        <span id="icon12" class="material-symbols-outlined">cloud</span></div>
-         <div class="num1"><pre >11&#176|-5&#176</pre></div>
-         <div class="world">
-         <p>Daytime : The skies will be mostly cloudy.</p> 
-         <p>Nighttime : The skies will be party cloudy.</p>
-         </div></div>
-</div></div></div>
+
+<body class="min-h-screen bg-gradient-to-br from-sky-100 via-blue-50 to-indigo-200 text-slate-800">
+
+    <header class="flex items-center justify-between gap-3 bg-white/80 px-5 py-4 shadow-sm">
+        <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-blue-700">
+            <span class="material-symbols-outlined text-4xl">partly_cloudy_day</span>
+            Wth
+        </a>
+
+        <div class="flex gap-2">
+            <button class="rounded-lg bg-blue-600 px-3 py-2 font-semibold text-white">°C</button>
+            <button class="rounded-lg border border-blue-200 bg-white px-3 py-2 font-semibold">°F</button>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl space-y-6 p-4 sm:p-8">
+
+        <section class="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white shadow-xl sm:p-10">
+            <p class="mb-2 text-sm text-blue-100">Weather Forecast</p>
+            <h1 class="text-3xl font-bold sm:text-4xl">4th District, Kabul Province</h1>
+            <p class="mt-3 text-blue-100">Your weekly weather overview</p>
+
+            <div class="mt-8 flex flex-wrap items-center justify-between gap-5">
+                <div>
+                    <span class="material-symbols-outlined text-7xl">cloud</span>
+                    <p class="mt-2 text-lg">Cloudy</p>
+                </div>
+
+                <div class="text-right">
+                    <p class="text-6xl font-light">11°</p>
+                    <p class="mt-2 text-blue-100">Low: -5°</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="rounded-3xl bg-white/90 p-5 shadow-lg sm:p-7">
+            <div class="mb-6 flex flex-wrap items-center justify-between gap-2">
+                <h2 class="text-2xl font-bold">Daily Forecast</h2>
+                <p class="text-sm text-slate-500">Kabul, Afghanistan</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+
+                <a href="Sunday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+                    <p class="font-semibold">Sunday</p>
+                    <span class="material-symbols-outlined my-3 text-4xl text-blue-500">cloud</span>
+                    <p class="font-bold">11° / -5°</p>
+                </a>
+
+                <a href="Monday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+                    <p class="font-semibold">Monday</p>
+                    <span class="material-symbols-outlined my-3 text-4xl text-amber-500">sunny</span>
+                    <p class="font-bold">13° / -3°</p>
+                </a>
+
+                <a href="Tuesday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+                    <p class="font-semibold">Tuesday</p>
+                    <span class="material-symbols-outlined my-3 text-4xl text-blue-500">cloudy_snowing</span>
+                    <p class="font-bold">8° / -4°</p>
+                </a>
+
+                <a href="Wendsday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+                    <p class="font-semibold">Wednesday</p>
+                    <span class="material-symbols-outlined my-3 text-4xl text-sky-500">rainy</span>
+                    <p class="font-bold">7° / -2°</p>
+                </a>
+
+                <a href="Thursday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+                    <p class="font-semibold">Thursday</p>
+                    <span class="material-symbols-outlined my-3 text-4xl text-amber-500">partly_cloudy_day</span>
+                    <p class="font-bold">10° / -3°</p>
+                </a>
+
+                <a href="Friday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+                    <p class="font-semibold">Friday</p>
+                    <span class="material-symbols-outlined my-3 text-4xl text-slate-600">thunderstorm</span>
+                    <p class="font-bold">9° / -2°</p>
+                </a>
+
+                <a href="Saturday.html" class="rounded-2xl border border-slate-100 bg-sky-50 p-4 text-center transition hover:-translate-y-1 hover:shadow-md">
+                    <p class="font-semibold">Saturday</p>
+                    <span class="material-symbols-outlined my-3 text-4xl text-blue-500">air</span>
+                    <p class="font-bold">10° / -4°</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+
+            <div class="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-md">
+                <span class="material-symbols-outlined text-4xl text-blue-500">water_drop</span>
+                <div>
+                    <p class="text-sm text-slate-500">Humidity</p>
+                    <p class="text-2xl font-bold">22%</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-md">
+                <span class="material-symbols-outlined text-4xl text-indigo-500">device_thermostat</span>
+                <div>
+                    <p class="text-sm text-slate-500">Dew Point</p>
+                    <p class="text-2xl font-bold">-13°</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-md">
+                <span class="material-symbols-outlined text-4xl text-sky-500">air</span>
+                <div>
+                    <p class="text-sm text-slate-500">Wind</p>
+                    <p class="text-2xl font-bold">12 km/h</p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="py-4 text-center text-sm text-slate-500">
+            Weather Dashboard | Kabul, Afghanistan
+        </footer>
+
+    </main>
+
 </body>
 </html>
