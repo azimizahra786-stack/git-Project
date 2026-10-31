@@ -1,74 +1,161 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-     <title>Sunday</title>
-      <link rel="stylesheet" href="day.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet"></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday | Weather Kabul</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
-<body>
-       <div class="container">
-    <div class="card">
-        <div>
-            <div class="title">Kabul</div>
-                 <p>06:00 AM, Sunday, Januery 01,2025</p>
-                 <div class="clear">
-                 <p class="clear1"><b>Clear</b></p>
-                 <span id="icon" class="material-symbols-outlined">cloud</span>
-                   <p class="eight">18&#176</p>
-                   <p>Min: 12&#176</p> 
-                   <p>Max: 16&#176</p>
-                 </div>
-    <pre class="hourly"><b>Hourly Forecast</b></pre>
-<div class="time"><b>06:00AM 07:00AM 08:00AM 09:00AM 10:00AM 11:00AM 12:00PM</b></div>
-<div class="num">24%  29% 33% 42% 50% 60% 11%</div></div>
-<div class="span">
-<span class="material-symbols-outlined">cloud</span>
-<span class="material-symbols-outlined">cloud</span>
-<span id="black" class="material-symbols-outlined">thunderstorm</span>
-<span id="blue" class="material-symbols-outlined">rainy</span>
-<span id="blue" class="material-symbols-outlined">rainy</span>
-<span id="blue" class="material-symbols-outlined">rainy</span>
-<span class="material-symbols-outlined">air</span>
-</div>
 
-<div class="container1">
-<div class="grade1">
-<span id="drop" class="material-symbols-outlined">thermostat</span>
-    <p>Real Feel</p>
-    <p>20&#176</p></div>
+<body class="min-h-screen bg-black text-white flex justify-center items-center p-4">
 
-    <div class="grade1">
-<span id="drop1" class="material-symbols-outlined">air</span>    <p>Wind</p>
-    <p>15&#176</p>
-    </div></div>
-<div class="container2">
- <div class="grade1">
-    <span id="drop" class="material-symbols-outlined">water_drop</span>
-    <p>Humidity</p>
-    <p>12&#176</p></div>
+    <main class="w-full max-w-2xl bg-[#1e1e1e] rounded-2xl shadow-xl p-5 sm:p-8">
 
-    <div class="grade1">
-<span id="drop1" class="material-symbols-outlined">blood_pressure</span>
-    <p>Pressure</p>
-    <p>18&#176</p></div></div>
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-blue-300">Kabul</h1>
+            <p class="text-gray-400 mt-2 text-sm">
+                06:00 AM, Sunday, January 01, 2025
+            </p>
+        </header>
 
+        <div class="flex justify-center gap-3 mb-6">
+            <button id="celsiusBtn" class="bg-blue-500 hover:bg-black px-4 py-2 rounded-lg">°C</button>
+            <button id="fahrenheitBtn" class="bg-blue-500 hover:bg-black px-4 py-2 rounded-lg">°F</button>
+        </div>
 
-</div></div>
+        <section class="text-center mb-8">
+
+            <p class="text-xl font-semibold text-yellow-300">Clear</p>
+
+            <span class="material-symbols-outlined text-yellow-300 text-7xl mt-2">
+                cloud
+            </span>
+
+            <h2 class="text-6xl font-bold mt-2 temperature" data-celsius="18">18°</h2>
+
+            <div class="flex justify-center gap-6 text-gray-300 mt-3">
+                <p>Min: <span class="temperature" data-celsius="12">12°</span></p>
+                <p>Max: <span class="temperature" data-celsius="16">16°</span></p>
+            </div>
+
+        </section>
+
+        <hr class="border-gray-700">
+
+        <section class="mt-6">
+
+            <h2 class="text-xl font-bold mb-5">Hourly Forecast</h2>
+
+            <div class="grid grid-cols-4 sm:grid-cols-7 gap-3 text-center">
+
+                <div class="bg-black rounded-xl p-3">
+                    <p class="text-xs text-gray-400">06:00 AM</p>
+                    <span class="material-symbols-outlined text-3xl mt-3">cloud</span>
+                    <p class="text-sm mt-2">24%</p>
+                </div>
+
+                <div class="bg-black rounded-xl p-3">
+                    <p class="text-xs text-gray-400">07:00 AM</p>
+                    <span class="material-symbols-outlined text-3xl mt-3">cloud</span>
+                    <p class="text-sm mt-2">29%</p>
+                </div>
+
+                <div class="bg-black rounded-xl p-3">
+                    <p class="text-xs text-gray-400">08:00 AM</p>
+                    <span class="material-symbols-outlined text-3xl mt-3 text-gray-400">thunderstorm</span>
+                    <p class="text-sm mt-2">33%</p>
+                </div>
+
+                <div class="bg-black rounded-xl p-3">
+                    <p class="text-xs text-gray-400">09:00 AM</p>
+                    <span class="material-symbols-outlined text-3xl mt-3 text-blue-400">rainy</span>
+                    <p class="text-sm mt-2">42%</p>
+                </div>
+
+                <div class="bg-black rounded-xl p-3">
+                    <p class="text-xs text-gray-400">10:00 AM</p>
+                    <span class="material-symbols-outlined text-3xl mt-3 text-blue-400">rainy</span>
+                    <p class="text-sm mt-2">50%</p>
+                </div>
+
+                <div class="bg-black rounded-xl p-3">
+                    <p class="text-xs text-gray-400">11:00 AM</p>
+                    <span class="material-symbols-outlined text-3xl mt-3 text-blue-400">rainy</span>
+                    <p class="text-sm mt-2">60%</p>
+                </div>
+
+                <div class="bg-black rounded-xl p-3">
+                    <p class="text-xs text-gray-400">12:00 PM</p>
+                    <span class="material-symbols-outlined text-3xl mt-3">air</span>
+                    <p class="text-sm mt-2">11%</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 gap-4 mt-8">
+
+            <div class="bg-black rounded-xl p-4">
+                <span class="material-symbols-outlined text-blue-400 text-3xl">thermostat</span>
+                <p class="text-gray-400 mt-2">Real Feel</p>
+                <p class="text-2xl font-bold mt-1 temperature" data-celsius="20">20°</p>
+            </div>
+
+            <div class="bg-black rounded-xl p-4">
+                <span class="material-symbols-outlined text-blue-400 text-3xl">air</span>
+                <p class="text-gray-400 mt-2">Wind</p>
+                <p class="text-2xl font-bold mt-1">15</p>
+            </div>
+
+            <div class="bg-black rounded-xl p-4">
+                <span class="material-symbols-outlined text-blue-400 text-3xl">water_drop</span>
+                <p class="text-gray-400 mt-2">Humidity</p>
+                <p class="text-2xl font-bold mt-1">12%</p>
+            </div>
+
+            <div class="bg-black rounded-xl p-4">
+                <span class="material-symbols-outlined text-blue-400 text-3xl">blood_pressure</span>
+                <p class="text-gray-400 mt-2">Pressure</p>
+                <p class="text-2xl font-bold mt-1">18 hPa</p>
+            </div>
+
+        </section>
+
+        <a href="index.html" class="block text-center mt-8 text-blue-300 hover:text-white">
+            ← Back to Home
+        </a>
+
+    </main>
+
+    <script>
+        const celsiusBtn = document.getElementById("celsiusBtn");
+        const fahrenheitBtn = document.getElementById("fahrenheitBtn");
+
+        let currentUnit = "C";
+
+        function changeTemperature(unit) {
+            if (currentUnit === unit) return;
+
+            document.querySelectorAll(".temperature").forEach(element => {
+                const celsius = Number(element.dataset.celsius);
+
+                const result = unit === "F"
+                    ? (celsius * 9 / 5) + 32
+                    : celsius;
+
+                element.textContent = Math.round(result) + "°";
+            });
+
+            currentUnit = unit;
+        }
+
+        celsiusBtn.addEventListener("click", () => changeTemperature("C"));
+        fahrenheitBtn.addEventListener("click", () => changeTemperature("F"));
+    </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
